@@ -1,0 +1,12 @@
+# Site settings
+title: Axis of Denial
+email: orbitofdeceit@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+ Magnet for unwanted social media gurus, tweet bots and online marketing. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://orbitofdeceit.github.io" # the base hostname & protocol for your site
+twitter_username: orbitofdeceit
+github_username:  orbitofdeceit
+
+# Build settings
+markdown: kramdown
