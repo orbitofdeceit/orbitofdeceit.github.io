@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Enterprise Development Haiku No.1
+title: Initial commit
+categories: haiku
+tags: haiku
 ---
 
 Initial commit  
