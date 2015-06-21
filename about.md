@@ -1,7 +1,9 @@
 ---
 layout: page
-title: About
+title: Everyone Lies
 permalink: /about/
 ---
 
-"The Earth spins on an axis of denial in an orbit of deceit."
+> "...the earth spins on an axis of denial in an orbit of deceit."
+
+"Homicide: A Year on the Killing Streets", David Simon
