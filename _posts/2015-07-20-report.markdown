@@ -1,0 +1,9 @@
+---
+layout: post
+title: Report
+categories: haiku
+tags: haiku
+---
+An actionable
+Intelligence data flash?
+No, it's a report.
