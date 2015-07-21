@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Management framework
+title: Management Framework
 categories: haiku
 tags: haiku
 ---
