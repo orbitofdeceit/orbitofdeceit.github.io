@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Initial commit
+title: Initial Commit
 categories: haiku
 tags: haiku
 ---
