@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Heritage software
+title: Heritage Software
 categories: haiku
 tags: haiku
 ---
