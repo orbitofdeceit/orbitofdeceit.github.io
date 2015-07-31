@@ -6,4 +6,4 @@ tags: haiku
 ---
 Management Jenga  
 Silence of the stakeholders      
-Then the moose attacks
+Then a moose attacks
