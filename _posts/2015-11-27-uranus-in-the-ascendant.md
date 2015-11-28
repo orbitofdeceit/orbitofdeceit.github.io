@@ -5,5 +5,5 @@ categories: haiku
 tags: haiku
 ---
 A jar that you use   
-Turns out to have bad Feng Shui  
+Manifested bad Feng Shui  
 Expect an upgrade 
