@@ -1,9 +1,10 @@
 ---
 layout: post
-title: BA
+title: Business Analysis
 categories: haiku
 tags: haiku
 ---
-Analysing it?  
-Can you tell what it is yet?  
-No, probably not.  
+How hard will it be?  
+When can you deliver it?
+IT's constipated.  
+  
