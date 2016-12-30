@@ -6,4 +6,4 @@ tags: haiku
 ---
 I will be Agile   
 And execute strategy  
-While you shave this yak.
+While you shave my yak.
