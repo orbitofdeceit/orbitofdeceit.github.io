@@ -1,5 +1,5 @@
 ---
-title: JavaScript Types
+title: JavaScript Problems
 categories: haiku
 tags: haiku
 ---
