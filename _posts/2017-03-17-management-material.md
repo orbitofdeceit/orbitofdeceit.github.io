@@ -4,5 +4,5 @@ categories: haiku
 tags: haiku
 ---
 Roll with the punches  
-Free your panties from bunchies  
+Watch your panties for bunchies  
 Eat the free lunches.
