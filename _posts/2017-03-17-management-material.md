@@ -4,5 +4,5 @@ categories: haiku
 tags: haiku
 ---
 Roll with the punches  
-Check your panties for bunchies  
+Check your panties for bunches  
 Take the free lunches.
