@@ -5,4 +5,4 @@ tags: haiku
 ---
 Roll with the punches  
 Check your panties for bunchies  
-Eat the free lunches.
+Take the free lunches.
