@@ -1,12 +1,12 @@
 # Site settings
 title: The Paranoid Tip
 email: orbitofdeceit@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
- Magnet for unwanted social media gurus, tweet bots and online marketing. 
 baseurl: "" # the subpath of your site, e.g. /blog/
+description: Magnet for tweet bots, unwanted social media gurus and online marketing
 url: "http://orbitofdeceit.github.io" # the base hostname & protocol for your site
 twitter_username: orbitofdeceit
 github_username:  orbitofdeceit
+theme: minima
 
 # Build settings
 markdown: kramdown
