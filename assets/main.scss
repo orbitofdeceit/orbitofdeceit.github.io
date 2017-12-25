@@ -14,3 +14,13 @@
   letter-spacing: -1px;
   line-height: 1;
 }
+
+img.img-circle {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0px;
+  vertical-align: text-bottom; 
+}
+
