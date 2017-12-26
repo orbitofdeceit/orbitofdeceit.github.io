@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Everyone Lies
+title: About
 permalink: /about/
 ---
 
