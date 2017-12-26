@@ -1,5 +1,5 @@
 ---
-title: Care of Your Millennial
+title: Millennial
 categories: haiku
 tags: haiku
 ---
