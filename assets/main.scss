@@ -2,6 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$base-font-family: 'Barlow Semi Condensed', sans-serif !default;
+$base-font-size:   20px !default;
+
 @import "minima";
 
 .post-link {
