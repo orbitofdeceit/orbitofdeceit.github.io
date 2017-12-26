@@ -13,10 +13,6 @@ Sir Mix-A-Lot
 
 "Homicide: A Year on the Killing Streets", David Simon
 
-> "You can't always write a chord ugly enough to say what you want to say, so sometimes you have to rely on a giraffe filled with whipped cream."
-
-Frank Zappa
-
 > "When the going gets weird, the weird turn pro."
 
 Hunter S. Thompson
