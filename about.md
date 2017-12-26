@@ -29,10 +29,6 @@ Woody Allen
 
 Steve Taylor
 
-> "Lisp has the visual appeal of oatmeal with finger nail clippings mixed in."
-
-Larry Wall
-
 > "You can't cure obesity with bigger pants."
 
 Mr. Money Mustache
