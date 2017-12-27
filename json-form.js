@@ -63,8 +63,8 @@ const handleFormSubmit = event => {
 
   fetch(form.action, {
     method: 'post',
-    mode: 'same-origin',
-    credentials: 'same-origin',
+    mode: 'cors',
+    credentials: 'include',
     headers,  
     body: json
   }).catch(console.log);
