@@ -55,10 +55,13 @@ const handleFormSubmit = event => {
 
   const form = event.currentTarget;  
   const data = formToJSON(form.elements);
+  const secret = data['secret'];
+  delete data['secret'];  
   const json = JSON.stringify(data, null, "  ");
 
   const headers = new Headers({
-      "content-type": "application/json;charset=utf-8"
+      'content-type': 'application/json;charset=utf-8',
+      'x-api-key': secret
   });
 
   fetch(form.action, {

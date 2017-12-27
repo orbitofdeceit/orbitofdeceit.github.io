@@ -17,9 +17,12 @@ layout: null
 <body>
 <form action="https://api.orbitofdeceit.com/haiku" method="POST" name="add-haiku" id='json-form'>
     <div id="grid">
+    <label>API Key</label><input type="password" name="secret">
+    <div></div><br/>
     <label>Title</label><input type="text" name="title">
     <label>File</label><input type="filename" name="filename">
-    <div></div><input type="text" name="line-0">
+    <div></div><br/>
+    <label>Haiku</label><input type="text" name="line-0">
     <div></div><input type="text" name="line-1">
     <div></div><input type="text" name="line-2">
     </div>
