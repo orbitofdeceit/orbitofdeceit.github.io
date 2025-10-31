@@ -17,7 +17,8 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          # Use Ruby 2.7 to match older gem constraints (ruby_dep and github-pages' dependencies)
+          ruby-version: '2.7'
           bundler-cache: true
 
       - name: Install dependencies
