@@ -1,4 +1,10 @@
+# Zola build output
+public/
+
+# Editor files
+*.swp
+
+# Old Jekyll artifacts (kept for reference)
 _site
 .sass-cache
-*.swp
 _drafts
