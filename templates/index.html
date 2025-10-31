@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>{{ section.title }}</h1>
-  
-  {% if section.description %}
-    <p class="subtitle">{{ section.description }}</p>
-  {% endif %}
+  <div class="home">
+    <ul class="post-list">
+      {% for page in section.pages %}
+        <li>
+          {% if page.date %}
+            <span class="post-meta">{{ page.date | date(format="%b %-d, %Y") }}</span>
+          {% endif %}
 
-  <div class="posts">
-    {% for page in section.pages %}
-      <article class="post-summary">
-        <h3 class="post-title">
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
-        </h3>
-        {% if page.date %}
-          <time>{{ page.date | date(format="%B %d, %Y") }}</time>
-        {% endif %}
-      </article>
-    {% endfor %}
+          <h2>
+            <a class="post-link" href="{{ page.permalink }}">{{ page.title }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="/rss.xml">via RSS</a></p>
   </div>
 {% endblock %}
