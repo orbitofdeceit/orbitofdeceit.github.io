@@ -4,7 +4,6 @@ email: orbitofdeceit@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog/
 description: Magnet for tweet bots, unwanted social media gurus and online marketing
 url: "http://orbitofdeceit.github.io" # the base hostname & protocol for your site
-twitter_username: orbitofdeceit
 github_username:  orbitofdeceit
 theme: minima
 
