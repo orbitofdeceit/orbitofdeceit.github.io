@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config.title }}{% if page.title %} — {{ page.title }}{% endif %}</title>
+    <meta name="description" content="{{ config.description }}">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1><a href="{{ config.base_url | default(url) }}">{{ config.title }}</a></h1>
+    </div>
+</header>
+<main class="container">
+    {{ content }}
+</main>
+<footer class="container">
+    <p>© {{ now | date(format="%Y") }} {{ config.title }} — <a href="https://github.com/{{ config.extra.github_username }}">GitHub</a></p>
+</footer>
+</body>
+</html>

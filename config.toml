@@ -1,0 +1,8 @@
+base_url = "https://orbitofdeceit.github.io"
+title = "The Paranoid Tip"
+description = "Magnet for tweet bots, unwanted social media gurus and online marketing"
+language = "en"
+build_search_index = false
+
+[extra]
+github_username = "orbitofdeceit"

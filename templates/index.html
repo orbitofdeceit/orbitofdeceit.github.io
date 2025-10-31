@@ -1,0 +1,10 @@
+{# index template - lists posts #}
+{% extends "base.html" %}
+{% block content %}
+  <h2>Recent posts</h2>
+  <ul>
+  {% for post in sections.posts.pages | reverse %}
+    <li><a href="{{ post.permalink }}">{{ post.title }}</a> — <small>{{ post.date | date(format="%Y-%m-%d") }}</small></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
