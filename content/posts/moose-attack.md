@@ -1,10 +1,10 @@
----
-date: 2015-07-30
-layout: post
-title: Moose Attack
-categories: haiku
-tags: haiku
----
++++
+date = 2015-07-30
+title = "Moose Attack"
+layout = "post"
+tags = "haiku"
+taxonomies.categories = ['haiku']
++++
 
 Management Jenga  
 Silence of the stakeholders      

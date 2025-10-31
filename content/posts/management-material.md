@@ -1,8 +1,8 @@
----
-date: 2017-03-17
-title: Corporate Citizen
-categories: haiku
----
++++
+date = 2017-03-17
+title = "Corporate Citizen"
+taxonomies.categories = ['haiku']
++++
 
 Roll with the punches  
 Check your panties for bunches  

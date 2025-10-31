@@ -1,9 +1,9 @@
----
-date: 2015-06-24
-layout: post
-title: Product Manager
-categories: haiku
----
++++
+date = 2015-06-24
+title = "Product Manager"
+layout = "post"
+taxonomies.categories = ['haiku']
++++
 
 Curating our brand  
 Reaching out to customers  

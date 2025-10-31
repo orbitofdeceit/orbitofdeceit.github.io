@@ -1,8 +1,8 @@
----
-date: 2019-11-10
-title: Ghost Writer
-categories: other
----
++++
+date = 2019-11-10
+title = "Ghost Writer"
+taxonomies.categories = ['other']
++++
 
 [GPT-2](https://talktotransformer.com/) rewrites [‘Diplomacy Is For Mugs’](/other/2017/12/25/qvd.html).
 

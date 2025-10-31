@@ -1,9 +1,9 @@
----
-date: 2016-12-30
-layout: post
-title: The Golden Nugget
-categories: haiku
----
++++
+date = 2016-12-30
+title = "The Golden Nugget"
+layout = "post"
+taxonomies.categories = ['haiku']
++++
 
 I will be Agile   
 And execute strategy  

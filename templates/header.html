@@ -1,11 +1,14 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <a class="site-title" href="/">{{ config.title | safe }}</a>
+    <a class="site-title" href="/">
+      <img src="/images/logo.jpeg" alt="{{ config.title }}" class="site-logo" />
+      <span class="site-title-text">{{ config.title | safe }}</span>
+    </a>
     <nav class="site-nav">
       <div class="trigger">
-        {# Simple nav: About and Home. Extend as needed. #}
         <a class="page-link" href="/">Home</a>
         <a class="page-link" href="/about/">About</a>
+        <a class="page-link" href="/categories/">Categories</a>
       </div>
     </nav>
   </div>

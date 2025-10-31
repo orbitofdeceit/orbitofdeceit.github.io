@@ -1,8 +1,8 @@
----
-date: 2017-12-25
-title: AWS Free Tier
-categories: haiku
----
++++
+date = 2017-12-25
+title = "AWS Free Tier"
+taxonomies.categories = ['haiku']
++++
 
 New billing alert:  
 Usage quota exceeded  

@@ -1,8 +1,8 @@
----
-date: 2017-02-10
-title: Enterprise Ready
-categories: haiku
----
++++
+date = 2017-02-10
+title = "Enterprise Ready"
+taxonomies.categories = ['haiku']
++++
 
 On the bleeding edge  
 But fatally compromised  

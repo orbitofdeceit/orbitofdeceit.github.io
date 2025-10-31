@@ -1,8 +1,8 @@
----
-date: 2017-10-06
-title: Failure To Launch
-categories: haiku
----
++++
+date = 2017-10-06
+title = "Failure To Launch"
+taxonomies.categories = ['haiku']
++++
 
 You try to restart  
 But it doesn’t come back up:  

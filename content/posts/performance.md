@@ -1,9 +1,9 @@
----
-date: 2015-07-25
-layout: post
-title: Performance Concern
-categories: haiku
----
++++
+date = 2015-07-25
+title = "Performance Concern"
+layout = "post"
+taxonomies.categories = ['haiku']
++++
 
 We have changed nothing  
 Yet the system is slower  

@@ -1,9 +1,9 @@
----
-date: 2015-06-22
-layout: post
-title: Heritage Software
-categories: haiku
----
++++
+date = 2015-06-22
+title = "Heritage Software"
+layout = "post"
+taxonomies.categories = ['haiku']
++++
 
 Heritage software  
 Snow drifts through silent valleys  

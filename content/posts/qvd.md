@@ -1,9 +1,9 @@
----
-date: 2017-12-25
-layout: post
-title: "Diplomacy Is For Mugs"
-categories: other
----
++++
+date = 2017-12-25
+title = "Diplomacy Is For Mugs"
+layout = "post"
+taxonomies.categories = ['other']
++++
 
 Queen Victoria resumed the conversation with the bottle she'd lifted from the diner. The sherry might taste of crap but it at least wasn't a good judge of character. Bad deeds need an easy audience.  
 

@@ -1,8 +1,8 @@
----
-date: 2017-01-02
-title: JavaScript Problems
-categories: haiku
----
++++
+date = 2017-01-02
+title = "JavaScript Problems"
+taxonomies.categories = ["haiku"]
++++
 
 What's an integer?  
 Close the page, open the page.  

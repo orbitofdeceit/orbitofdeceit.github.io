@@ -1,9 +1,9 @@
----
-date: 2015-12-04
-layout: post
-title: Release Process
-categories: haiku
----
++++
+date = 2015-12-04
+title = "Release Process"
+layout = "post"
+taxonomies.categories = ['haiku']
++++
 
 The software will slow  
 And asymptotically  

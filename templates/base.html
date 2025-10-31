@@ -4,12 +4,11 @@
 <body>
 {% include "header.html" %}
 <main class="container">
-    {{ content }}
-    
+  {% block content %}{% endblock %}
 </main>
 <footer class="container site-footer">
     <div class="footer-col-wrapper">
-      <p>© {{ now | date(format="%Y") }} {{ config.title }} — <a href="https://github.com/{{ config.extra.github_username }}">GitHub</a></p>
+      <p>© 2015-2025 {{ config.title }} — <a href="https://github.com/{{ config.extra.github_username }}">GitHub</a></p>
     </div>
 </footer>
 </body>

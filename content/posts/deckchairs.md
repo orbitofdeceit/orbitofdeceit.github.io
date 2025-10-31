@@ -1,8 +1,8 @@
----
-date: 2017-01-10
-title: Management Reshuffle
-categories: haiku
----
++++
+date = 2017-01-10
+title = "Management Reshuffle"
+taxonomies.categories = ['haiku']
++++
 
 Colonic douching.  
 Enterprise digestive tract  
