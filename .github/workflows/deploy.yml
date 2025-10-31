@@ -38,16 +38,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
-      - name: Resolve symlinks (create copy without symlinks)
-        run: |
-          rm -rf public-no-symlinks || true
-          # Copy and dereference any symlinks/hard links so the artifact contains only regular files
-          rsync -aL public/ public-no-symlinks/
-          echo 'Resolved public size:'; du -sh public-no-symlinks || true
-
       - name: Check artifact size (fail if > 10GB)
         run: |
-          SIZE_KB=$(du -sk public-no-symlinks | cut -f1)
+          SIZE_KB=$(du -sk public | cut -f1)
           MAX_KB=$((10 * 1024 * 1024))
           echo "Artifact size (KB): $SIZE_KB, limit (KB): $MAX_KB"
           if [ "$SIZE_KB" -gt "$MAX_KB" ]; then
@@ -55,10 +48,10 @@ jobs:
             exit 1
           fi
 
-      - name: Upload Pages artifact
+      - name: Upload Pages artifact (from public/)
         uses: actions/upload-pages-artifact@v2
         with:
-          path: public-no-symlinks
+          path: public
 
   deploy:
     environment:
