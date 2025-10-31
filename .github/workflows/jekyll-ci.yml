@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
+          # Use the Bundler provided by the runner/ruby action (installing
+          # a newer bundler can fail on older Ruby versions like 2.7).
           bundle install --jobs 4 --retry 3
 
       - name: Build site with Jekyll
