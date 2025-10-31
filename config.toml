@@ -4,16 +4,18 @@ description = "Magnet for tweet bots, unwanted social media gurus and online mar
 default_language = "en"
 build_search_index = false
 
-# Enable RSS feed and sitemap
-generate_feed = true
-feed_filename = "rss.xml"
-generate_rss = true
+# Enable RSS feeds and sitemap
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+generate_sitemap = true
 
 # Enable categories taxonomy with RSS feed
 taxonomies = [
     {name = "categories", feed = true},
 ]
 
+# Add author information
+author = "Neil Thraves"
+
 [extra]
 github_username = "orbitofdeceit"
-author = "Neil Thraves"
