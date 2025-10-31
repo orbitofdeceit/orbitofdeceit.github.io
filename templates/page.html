@@ -2,10 +2,10 @@
 
 {% block content %}
 <article class="post">
-    <h1 class="title">{{ page.title }}</h1>
     {% if page.date %}
-        <time>{{ page.date | date(format="%B %d, %Y") }}</time>
+        <span class="post-meta">{{ page.date | date(format="%b %-d, %Y") }}</span>
     {% endif %}
+    <h1 class="title">{{ page.title }}</h1>
     
     <div class="content">
         {{ page.content | safe }}
