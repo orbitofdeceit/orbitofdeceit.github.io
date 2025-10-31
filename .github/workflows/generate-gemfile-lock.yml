@@ -28,10 +28,10 @@ jobs:
           ruby -v
           bundle -v
 
-      - name: Generate/update Gemfile.lock
+      - name: Install dependencies and generate Gemfile.lock
         run: |
-          # Generate/update lockfile with resolved dependencies
-          bundle lock --update
+          # Install gems which will generate/update Gemfile.lock
+          bundle install --jobs 4 --retry 3
 
       - name: Commit and push Gemfile.lock if changed
         run: |
