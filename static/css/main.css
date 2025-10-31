@@ -70,6 +70,9 @@ table td { border: 1px solid #e8e8e8; }
   height: 40px;
   vertical-align: middle;
   margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .site-title {
