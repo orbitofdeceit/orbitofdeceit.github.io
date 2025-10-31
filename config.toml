@@ -1,8 +1,19 @@
 base_url = "https://orbitofdeceit.github.io"
 title = "The Paranoid Tip"
 description = "Magnet for tweet bots, unwanted social media gurus and online marketing"
-language = "en"
+default_language = "en"
 build_search_index = false
+
+# Enable RSS feed and sitemap
+generate_feed = true
+feed_filename = "rss.xml"
+generate_rss = true
+
+# Enable categories taxonomy with RSS feed
+taxonomies = [
+    {name = "categories", feed = true},
+]
 
 [extra]
 github_username = "orbitofdeceit"
+author = "Neil Thraves"
