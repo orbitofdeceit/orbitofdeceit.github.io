@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | safe }}{% else %}{{ config.title | safe }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default(config.description) }}">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+  <link rel="canonical" href="{{ page.permalink | default(config.base_url) }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="/feed.xml">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  {# If you need analytics, add conditional include or config flag #}
+</head>
