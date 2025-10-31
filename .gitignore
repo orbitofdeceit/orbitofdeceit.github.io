@@ -6,8 +6,3 @@ public/
 
 # Binary files
 .DS_Store
-
-# Old Jekyll artifacts (kept for reference)
-_site
-.sass-cache
-_drafts
