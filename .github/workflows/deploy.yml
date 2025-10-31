@@ -38,13 +38,27 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Resolve symlinks (create copy without symlinks)
+        run: |
+          rm -rf public-no-symlinks || true
+          # Copy and dereference any symlinks/hard links so the artifact contains only regular files
+          rsync -aL public/ public-no-symlinks/
+          echo 'Resolved public size:'; du -sh public-no-symlinks || true
+
+      - name: Check artifact size (fail if > 10GB)
+        run: |
+          SIZE_KB=$(du -sk public-no-symlinks | cut -f1)
+          MAX_KB=$((10 * 1024 * 1024))
+          echo "Artifact size (KB): $SIZE_KB, limit (KB): $MAX_KB"
+          if [ "$SIZE_KB" -gt "$MAX_KB" ]; then
+            echo "Artifact exceeds 10GB limit ($SIZE_KB KB)" >&2
+            exit 1
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          name: github-pages
-          path: public/
-          if-no-files-found: error
-          retention-days: 1
+          path: public-no-symlinks
 
   deploy:
     environment:
