@@ -122,8 +122,6 @@ GEM
       rouge (~> 2)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
-    jekyll-docs (3.6.2)
-      jekyll (= 3.6.2)
     jekyll-feed (0.9.3)
       jekyll (~> 3.3)
     jekyll-gist (1.5.0)
@@ -261,8 +259,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-docs (= 3.6.2)
-  minima
 
 BUNDLED WITH
    2.1.4
