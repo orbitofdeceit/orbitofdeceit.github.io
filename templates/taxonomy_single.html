@@ -3,16 +3,16 @@
 {% block content %}
 <h1>Posts in category '{{ term.name }}'</h1>
 
-<ul>
+<ul class="post-list">
 {% for page in term.pages %}
     <li>
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
         {% if page.date %}
-        <small>({{ page.date | date(format="%B %d, %Y") }})</small>
+        <span class="post-meta">{{ page.date | date(format="%b %-d, %Y") }}</span>
         {% endif %}
+        <h2><a class="post-link" href="{{ page.permalink }}">{{ page.title }}</a></h2>
     </li>
 {% endfor %}
 </ul>
 
-<p><a href="/categories">View all categories</a></p>
+<p class="rss-subscribe"><a href="/categories">View all categories</a></p>
 {% endblock content %}
