@@ -4,7 +4,7 @@ title = "Ghost Writer"
 taxonomies.categories = ['other']
 +++
 
-[GPT-2](https://talktotransformer.com/) rewrites [‘Diplomacy Is For Mugs’](/other/2017/12/25/qvd.html).
+GPT-2 rewrites ['Diplomacy Is For Mugs'](@/posts/qvd.md).
 
 Queen Victoria resumed the conversation with the bottle she’d lifted from the diner. The sherry might taste of crap but it at least wasn’t a good judge of character. Bad deeds need an easy audience.
 
