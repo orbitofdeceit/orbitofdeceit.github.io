@@ -1,5 +1,5 @@
 ---
-description: 'Maintenance'
+description: 'Maintain the codebase with a focus on refactoring, bug fixes, and dependency updates.'
 tools: ['edit/createFile', 'edit/createDirectory', 'edit/editNotebook', 'edit/editFiles', 'search', 'new', 'runCommands', 'runTasks', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'todos', 'runTests']
 ---
 
