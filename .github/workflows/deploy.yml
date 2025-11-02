@@ -39,10 +39,14 @@ jobs:
           echo "ZOLA_PID=$ZOLA_PID" >> $GITHUB_ENV
           sleep 5
       
-      - name: Run site tests
+      - name: Install Bats
         run: |
-          chmod +x test-site.sh
-          ./test-site.sh
+          sudo apt-get update
+          sudo apt-get install -y bats
+
+      - name: Run Bats tests
+        run: |
+          bats -r tests
       
       - name: Stop Zola server
         if: always()

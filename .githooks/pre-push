@@ -84,7 +84,13 @@ fi
 echo "Zola server started (PID: $ZOLA_PID)"
 echo
 
-if ! ./test-site.sh; then
+if ! command -v bats >/dev/null 2>&1; then
+    echo "Error: 'bats' not found. Install bats-core (macOS: brew install bats-core)." >&2
+    exit 1
+fi
+
+echo "Running tests with Bats..."
+if ! bats -r tests; then
     echo
     echo "❌ Tests failed! Push aborted."
     echo "Fix the failing tests before pushing."

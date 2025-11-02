@@ -7,7 +7,7 @@ This is a GitHub Pages blog built with **Zola 0.21.0** (Rust-based static site g
 **Key Architecture:**
 - Zola
 - Tera templating engine (similar to Jinja2)
-- Zero-dependency testing with bash + curl
+- Testing with Bats + curl
 - Automated CI/CD via GitHub Actions
 - Live at: https://orbitofdeceit.github.io
 
@@ -23,7 +23,7 @@ zola serve
 zola build  # Output: public/
 
 # Run test suite (requires running server)
-./test-site.sh
+bats -r tests
 ```
 
 ### Pre-Push Requirements
@@ -44,7 +44,7 @@ The `.githooks/pre-push` hook enforces:
 
 ### Testing Infrastructure
 
-The `test-site.sh` script validates:
+The Bats test suite (`tests/`) validates:
 - All 34+ posts render correctly (`/posts/<slug>/`)
 - Category pages and RSS feeds (`/categories/<name>/`, `/categories/<name>/rss.xml`)
 - Zola internal links using `@/` syntax (e.g., `[@/posts/other-post.md]`)
@@ -177,7 +177,7 @@ The workflow uses `ZOLA_VERSION="0.21.0"` - keep in sync with local installation
 
 **Key files:**
 - `config.toml` - Site configuration
-- `test-site.sh` - Test suite
+- `tests/` - Bats test suite
 - `.githooks/pre-push` - Pre-push validation
 - `.github/workflows/deploy.yml` - CI/CD pipeline
 
