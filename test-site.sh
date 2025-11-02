@@ -97,15 +97,19 @@ check_content "$BASE_URL" "Agile Manifesto\|Create Sub-Task" "Homepage shows pos
 echo
 
 log_test "Testing individual posts..."
-POSTS=(
-    "agile-manifesto"
-    "javascript"
-    "software"
-    "heritage-software"
-    "management-framework"
-    "gpt-2"
-    "qvd"
-)
+# Dynamically discover all post files
+POSTS=()
+for post_file in content/posts/*.md; do
+    # Skip _index.md
+    if [[ "$(basename "$post_file")" == "_index.md" ]]; then
+        continue
+    fi
+    # Extract slug from filename (remove .md extension)
+    post_slug=$(basename "$post_file" .md)
+    POSTS+=("$post_slug")
+done
+
+echo "Found ${#POSTS[@]} posts to test"
 
 for post in "${POSTS[@]}"; do
     check_url "$BASE_URL/posts/$post/" "Post '$post' loads"
