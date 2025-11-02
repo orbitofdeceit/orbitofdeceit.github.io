@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running site tests before push..."
+echo "Running pre-push checks..."
 echo
 
 ZOLA_PID=""
@@ -18,6 +18,56 @@ trap cleanup EXIT
 if ! command -v zola &> /dev/null; then
     echo "Error: zola is not installed or not in PATH"
     exit 1
+fi
+
+# Check Zola version compatibility
+LOCAL_ZOLA_VERSION=$(zola --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+WORKFLOW_ZOLA_VERSION=$(grep -m1 'ZOLA_VERSION=' .github/workflows/deploy.yml | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+
+echo "Local Zola version: $LOCAL_ZOLA_VERSION"
+echo "Workflow Zola version: $WORKFLOW_ZOLA_VERSION"
+echo
+
+# Compare versions (convert to comparable numbers)
+version_compare() {
+    local v1=$1
+    local v2=$2
+    
+    IFS='.' read -ra V1 <<< "$v1"
+    IFS='.' read -ra V2 <<< "$v2"
+    
+    for i in 0 1 2; do
+        if [ "${V1[$i]:-0}" -gt "${V2[$i]:-0}" ]; then
+            return 1  # v1 > v2
+        elif [ "${V1[$i]:-0}" -lt "${V2[$i]:-0}" ]; then
+            return 2  # v1 < v2
+        fi
+    done
+    return 0  # v1 == v2
+}
+
+version_compare "$LOCAL_ZOLA_VERSION" "$WORKFLOW_ZOLA_VERSION"
+result=$?
+
+if [ $result -eq 1 ]; then
+    echo "⚠️  WARNING: Your local Zola version ($LOCAL_ZOLA_VERSION) is newer than the workflow version ($WORKFLOW_ZOLA_VERSION)"
+    echo
+    echo "RECOMMENDATION: Update the workflow to use Zola $LOCAL_ZOLA_VERSION"
+    echo
+    echo "To fix this:"
+    echo "1. Update .github/workflows/deploy.yml:"
+    echo "   sed -i '' 's/ZOLA_VERSION=\"$WORKFLOW_ZOLA_VERSION\"/ZOLA_VERSION=\"$LOCAL_ZOLA_VERSION\"/g' .github/workflows/deploy.yml"
+    echo
+    echo "2. Update documentation (README.md, TESTING.md) to reference version $LOCAL_ZOLA_VERSION"
+    echo
+    echo "3. Test the changes locally"
+    echo
+    echo "❌ Push aborted. Please update workflow Zola version to match local version."
+    exit 1
+elif [ $result -eq 2 ]; then
+    echo "⚠️  WARNING: Your local Zola version ($LOCAL_ZOLA_VERSION) is older than the workflow version ($WORKFLOW_ZOLA_VERSION)"
+    echo "Consider upgrading your local Zola installation."
+    echo
 fi
 
 echo "Starting Zola server..."

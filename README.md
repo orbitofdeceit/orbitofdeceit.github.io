@@ -8,7 +8,7 @@ This README documents how to build and serve the site locally, the CI deployment
 
 ### Requirements
 - macOS, Linux, or Windows
-- Zola 0.18.0+ (installation instructions below)
+- Zola 0.21.0+ (installation instructions below)
 
 ### Install Zola
 
@@ -20,7 +20,7 @@ brew install zola
 **Linux**
 ```bash
 # Download and install from GitHub releases
-ZOLA_VERSION="0.18.0"
+ZOLA_VERSION="0.21.0"
 wget -q -O zola.tar.gz "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
 tar -xzf zola.tar.gz
 sudo mv zola /usr/local/bin/
@@ -73,10 +73,11 @@ zola serve
 
 - `.github/workflows/deploy.yml` — builds the site with Zola on push to `master` and deploys to GitHub Pages automatically
 - The workflow:
-  1. Installs Zola 0.18.0
-  2. Runs `zola build`
-  3. Checks artifact size (must be < 10GB)
-  4. Uploads and deploys to GitHub Pages
+  1. Installs Zola 0.21.0
+  2. Runs tests against a live Zola server
+  3. Runs `zola build`
+  4. Checks artifact size (must be < 10GB)
+  5. Uploads and deploys to GitHub Pages
 
 The site is automatically deployed to **https://orbitofdeceit.github.io** on every push to `master`.
 
