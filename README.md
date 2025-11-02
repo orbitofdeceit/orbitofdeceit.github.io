@@ -37,6 +37,9 @@ scoop install zola
 ### Local development
 
 ```bash
+# First time setup: Enable pre-push hooks
+git config core.hooksPath .githooks
+
 # Build the site
 zola build
 # Output is in public/
@@ -45,6 +48,11 @@ zola build
 zola serve
 # Site available at http://127.0.0.1:1111
 ```
+
+**Pre-push Hook**: The `.githooks/pre-push` hook automatically:
+- Validates your local Zola version matches the workflow
+- Runs the full test suite before pushing
+- Prevents pushes if tests fail or versions mismatch
 
 ## Site structure
 
