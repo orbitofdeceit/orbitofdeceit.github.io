@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo "Running site tests before push..."
+echo
+
+ZOLA_PID=""
+
+cleanup() {
+    if [ -n "$ZOLA_PID" ] && kill -0 "$ZOLA_PID" 2>/dev/null; then
+        echo "Stopping Zola server (PID: $ZOLA_PID)..."
+        kill "$ZOLA_PID" 2>/dev/null
+        wait "$ZOLA_PID" 2>/dev/null
+    fi
+}
+
+trap cleanup EXIT
+
+if ! command -v zola &> /dev/null; then
+    echo "Error: zola is not installed or not in PATH"
+    exit 1
+fi
+
+echo "Starting Zola server..."
+zola serve --port 1111 > /dev/null 2>&1 &
+ZOLA_PID=$!
+
+sleep 3
+
+if ! kill -0 "$ZOLA_PID" 2>/dev/null; then
+    echo "Error: Failed to start Zola server"
+    exit 1
+fi
+
+echo "Zola server started (PID: $ZOLA_PID)"
+echo
+
+if ! ./test-site.sh; then
+    echo
+    echo "❌ Tests failed! Push aborted."
+    echo "Fix the failing tests before pushing."
+    exit 1
+fi
+
+echo
+echo "✅ All tests passed! Proceeding with push..."
+exit 0
