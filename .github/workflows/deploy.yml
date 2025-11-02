@@ -34,7 +34,7 @@ jobs:
       
       - name: Start Zola server
         run: |
-          zola serve --port 1111 &
+          zola serve --port 1111 --base-url http://127.0.0.1:1111 &
           ZOLA_PID=$!
           echo "ZOLA_PID=$ZOLA_PID" >> $GITHUB_ENV
           sleep 5
